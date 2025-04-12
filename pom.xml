@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.peihongzhe</groupId>
+    <artifactId>NameCheckForUE</artifactId>
+    <version>V0.1</version>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <!--maven-jar-plugin的版本-->
+                <!--如果版本这里出错，请ctrl+鼠标左键点击上面的maven-jar-plugin插件-->
+                <!--这样将会跳转到一个POM文件中，里面可以看到本机存在的maven-jar-plugin版本-->
+                <version>3.4.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <!--是否添加依赖的jar路径配置-->
+                            <addClasspath>true</addClasspath>
+                            <!--依赖的jar包存放位置-->
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <!--指定入口类，请设为你自己的程序主类-->
+                            <mainClass>com.peihongzhe.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
